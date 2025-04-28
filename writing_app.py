@@ -16,3 +16,6 @@ class DisappearingTextWritingApp:
         self.text.bind("<KeyRelease>", lambda e: self.timer.reset())
 
         self.timer.reset()
+
+    def clear_text(self):
+        self.text.delete('1.0', tk.END)
