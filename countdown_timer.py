@@ -11,7 +11,7 @@ class CountdownTimer:
             self.root.after_cancel(self._job)
         self._job = self.root.after(self.timeout_ms, self._timeout)
 
-    def timeout(self):
+    def _timeout(self):
         self._job = None
         self.on_timeout()
 
